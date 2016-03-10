@@ -8,3 +8,10 @@
   notify: restart rsyslog
 
 # Gotta take care of other rules if needed...
+
+- name: Copy logrotate config files 
+  template:
+    src={{ item }}
+    dest=/etc/logrotate.d/{{ item | basename | replace('.j2','') }}
+  with_items:
+    - logrotate.d/syslog.j2
