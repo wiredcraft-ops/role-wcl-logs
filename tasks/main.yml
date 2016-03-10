@@ -1,0 +1,10 @@
+---
+- name: Copy rsyslog config files 
+  template:
+    src={{ item }}
+    dest=/etc/rsyslog.d/{{ item | basename | replace('.j2','') }}
+  with_items:
+    - rsyslog.d/00-base.conf.j2
+  notify: restart rsyslog
+
+# Gotta take care of other rules if needed...

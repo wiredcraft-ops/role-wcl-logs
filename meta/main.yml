@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  name: wcl-logs
+  author: Wiredcraft
+  description: Simple management of syslog
+  company: Wiredcraft
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: CentOS
+  versions:
+    - all
+  galaxy_tags:
+    - wcl
+dependencies: []

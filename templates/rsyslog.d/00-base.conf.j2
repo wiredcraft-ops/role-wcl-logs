@@ -1,0 +1,22 @@
+{% if rsyslog_udp_enable %}
+#
+# Enable inbound UDP on localhost
+#
+$ModLoad imudp
+$UDPServerAddress {{ rsyslog_udp_bind }}
+$UDPServerRun {{ rsyslog_udp_port }}
+{% endif %}
+
+# 
+# Enable File as input
+#
+$ModLoad imfile
+
+$WorkDirectory {{ rsyslog_workdir }}
+
+{% if rsyslog_remote_logging %}
+#
+# Enable
+#
+{{ rsyslog_remote_filter }} @@{{ rsyslog_remote_address }}:{{ rsyslog_remote_port }}
+{% endif %}
