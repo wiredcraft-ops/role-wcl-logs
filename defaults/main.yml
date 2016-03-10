@@ -7,8 +7,8 @@ rsyslog_workdir: /var/lib/rsyslog
 
 rsyslog_remote_logging: false
 rsyslog_remote_filter: '*.*'
-rsyslog_remote_address:
-rsyslog_remote_port:
+rsyslog_remote_address: 
+rsyslog_remote_port: 514
 
 logrotate_frequency: daily
 logrotate_rotate: 30
