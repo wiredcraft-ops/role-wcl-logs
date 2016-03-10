@@ -10,3 +10,5 @@ rsyslog_remote_filter: '*.*'
 rsyslog_remote_address:
 rsyslog_remote_port:
 
+logrotate_frequency: daily
+logrotate_rotate: 30

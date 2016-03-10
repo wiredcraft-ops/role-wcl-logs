@@ -5,8 +5,8 @@
 /var/log/spooler
 /var/log/boot.log
 {
-    daily
-    rotate 30
+    {{ logrotate_frequency }}
+    rotate {{ logrotate_rotate }}
     notifempty
     compress
     dateext
