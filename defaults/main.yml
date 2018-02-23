@@ -3,6 +3,8 @@ rsyslog_udp_enable: true
 rsyslog_udp_bind: 127.0.0.1
 rsyslog_udp_port: 514
 
+rsyslog_file_input: true
+
 rsyslog_workdir: /var/lib/rsyslog
 
 rsyslog_remote_logging: false

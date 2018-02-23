@@ -7,10 +7,12 @@ $UDPServerAddress {{ rsyslog_udp_bind }}
 $UDPServerRun {{ rsyslog_udp_port }}
 {% endif %}
 
+{% if rsyslog_file_input %}
 # 
 # Enable File as input
 #
 $ModLoad imfile
+{% endif %}
 
 $WorkDirectory {{ rsyslog_workdir }}
 
