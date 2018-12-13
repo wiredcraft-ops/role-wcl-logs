@@ -1,5 +1,8 @@
 ---
-rsyslog_udp_enable: true
+rsyslog_tcp_enable: true
+rsyslog_tcp_port: 514
+
+rsyslog_udp_enable: false
 rsyslog_udp_bind: 127.0.0.1
 rsyslog_udp_port: 514
 
@@ -7,7 +10,7 @@ rsyslog_workdir: /var/lib/rsyslog
 
 rsyslog_remote_logging: false
 rsyslog_remote_filter: '*.*'
-rsyslog_remote_address: 
+rsyslog_remote_address:
 rsyslog_remote_port: 514
 
 logrotate_frequency: daily
