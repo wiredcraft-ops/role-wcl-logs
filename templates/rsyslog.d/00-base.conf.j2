@@ -1,13 +1,21 @@
+{% if rsyslog_tcp_enable %}
+#
+# Enable inbound TCP
+#
+$ModLoad imtcp
+$InputTCPServerRun {{ rsyslog_tcp_port }}
+{% endif %}
+
 {% if rsyslog_udp_enable %}
 #
-# Enable inbound UDP on localhost
+# Enable inbound UDP on {{ rsyslog_udp_bind }}
 #
 $ModLoad imudp
 $UDPServerAddress {{ rsyslog_udp_bind }}
 $UDPServerRun {{ rsyslog_udp_port }}
 {% endif %}
 
-# 
+#
 # Enable File as input
 #
 $ModLoad imfile
